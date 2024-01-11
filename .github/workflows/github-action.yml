@@ -13,7 +13,7 @@ jobs:
     
     - name: build and tag image
       run: |
-        docker build -t ${{secrets.USERNAME}}/action-uas:v1 -f Dockerfile .
+        docker build -t ${{secrets.USERNAME}}/uas-pcc-michael_MHS-2024:latest -f Dockerfile .
     
     - name: push to dockerhub
-      run: docker login -u ${{secrets.USERNAME}} -p ${{secrets.ACCESS_TOKEN}} && docker push ${{secrets.USERNAME}}/action-uas:v1
+      run: docker login -u ${{secrets.USERNAME}} -p ${{secrets.ACCESS_TOKEN}} && docker push ${{secrets.USERNAME}}/uas-pcc-michael_MHS-2024:latest
